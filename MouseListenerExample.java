@@ -1,16 +1,16 @@
 import java.awt.*;
 import java.awt.event.*;
-class MouseListenerExample{
+class MouseListenerExample extends Frame implements MouseListener{
   Label l;
   MouseListenerExample(){
     l=new Label();
-
+    add(l);
     addMouseListener(this);
 
-    l.setBounds(100,100,50,30);
-    l.setSize(500,500);
-    l.setLayout(null);
-    l.setVisible(true);
+    l.setBounds(100,100,100,100);
+    setSize(500,500);
+    setLayout(null);
+    setVisible(true);
   }
   public void mouseClicked(MouseEvent e){
     l.setText("Mouse Clicked");
